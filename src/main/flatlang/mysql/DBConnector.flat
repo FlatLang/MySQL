@@ -47,7 +47,7 @@ class DBConnector {
     }
 
     public updateError() {
-        error = new String(nova_db_error(mysql))
+        error = String(nova_db_error(mysql))
     }
 
     public changeUser(String username, String password, String database) {
@@ -71,17 +71,17 @@ class DBConnector {
             Int numRows = (Int)nova_num_rows(mysql)
             Int numCols = (Int)nova_num_cols(result)
 
-            String[][] rows = new Array(numRows)
+            String[][] rows = Array(numRows)
 
             for (i in 0..numRows) {
-                rows[i] = new Array<String>(numCols)
+                rows[i] = Array<String>(numCols)
 
                 for (j in 0..numCols) {
-                    rows[i][j] = new String(arrays[i][j])
+                    rows[i][j] = String(arrays[i][j])
                 }
             }
 
-            ResultSet r = new ResultSet(rows, numCols)
+            ResultSet r = ResultSet(rows, numCols)
 
             updateError()
 
