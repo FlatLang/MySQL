@@ -1,4 +1,4 @@
-package flatlang/mysql
+package flat/mysql
 
 class ResultSet {
   visible Int numRows => rows.count

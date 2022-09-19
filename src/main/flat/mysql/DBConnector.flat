@@ -1,6 +1,6 @@
-package flatlang/mysql
+package flat/mysql
 
-import flatlang/mysql/NativeDBConnector.h
+import flat/mysql/NativeDBConnector.h
 
 class DBConnector {
   external type MYSQL
